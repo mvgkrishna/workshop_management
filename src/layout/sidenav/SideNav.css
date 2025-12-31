@@ -1,0 +1,14 @@
+.logo_Container {
+  width: 300px;
+  border: 1px solid red;
+}
+
+.nav_container {
+  width: 300px;
+  height: 100vh;
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
