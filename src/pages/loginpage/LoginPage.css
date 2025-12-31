@@ -1,0 +1,21 @@
+.login-fields {
+  width: "100%";
+  display: "flex";
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.form-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.loginForm-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
