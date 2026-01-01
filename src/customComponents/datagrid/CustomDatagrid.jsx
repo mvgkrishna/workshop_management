@@ -1,0 +1,326 @@
+import Box from "@mui/material/Box";
+import { DataGrid } from "@mui/x-data-grid";
+import CustomPaper from "../paper/CustomPaper";
+import CustomTypography from "../typography/CustomTypography";
+import SearchIcon from "@mui/icons-material/Search";
+import BorderColorRoundedIcon from "@mui/icons-material/BorderColorRounded";
+import DeleteForeverRoundedIcon from "@mui/icons-material/DeleteForeverRounded";
+
+import CustomButton from "../button/CustomButton";
+import CustomTextField from "../textfield/CustomTextfield";
+import { InputAdornment } from "@mui/material";
+
+import "./CustomDatagrid.css";
+import { Height } from "@mui/icons-material";
+
+const columns = [
+  { field: "id", headerName: "ID", width: 50 },
+  {
+    field: "empid",
+    headerName: "Emp ID",
+    // width: 150,
+    editable: true,
+  },
+  {
+    field: "name",
+    headerName: "Name",
+    // width: 200,
+    editable: true,
+  },
+  {
+    field: "department",
+    headerName: "Department",
+    // width: 200,
+    editable: true,
+  },
+  {
+    field: "role",
+    headerName: "Role",
+    sortable: false,
+    // width: 150,
+  },
+  {
+    field: "contact",
+    headerName: "Contact",
+    // width: 200,
+  },
+  {
+    field: "password",
+    headerName: "Password",
+    // width: 200,
+  },
+  {
+    field: "status",
+    headerName: "Status",
+    // width: 150,
+  },
+  {
+    field: "actions",
+    headerName: "Actions",
+    // width: 150,
+    renderCell: () => {
+      return (
+        <div className="action_icons">
+          <BorderColorRoundedIcon />
+          <DeleteForeverRoundedIcon />
+        </div>
+      );
+    },
+  },
+];
+
+const rows = [
+  {
+    id: 1,
+    empid: "EMP001",
+    name: "Arjun Kumar",
+    department: "Engineering",
+    role: "Technician",
+    contact: "9876543210",
+    status: "Active",
+  },
+  {
+    id: 2,
+    empid: "EMP002",
+    name: "Rohit Sharma",
+    department: "Maintenance",
+    role: "Supervisor",
+    contact: "9876543211",
+    status: "Active",
+    actions: "View",
+  },
+  {
+    id: 3,
+    empid: "EMP003",
+    name: "Suresh Reddy",
+    department: "Production",
+    role: "Operator",
+    contact: "9876543212",
+    status: "Inactive",
+    actions: "View",
+  },
+  {
+    id: 4,
+    empid: "EMP004",
+    name: "Vikram Singh",
+    department: "Quality",
+    role: "Inspector",
+    contact: "9876543213",
+    status: "Active",
+    actions: "View",
+  },
+  {
+    id: 5,
+    empid: "EMP005",
+    name: "Kiran Patel",
+    department: "Logistics",
+    role: "Coordinator",
+    contact: "9876543214",
+    status: "Active",
+    actions: "View",
+  },
+  {
+    id: 6,
+    empid: "EMP006",
+    name: "Amit Verma",
+    department: "Engineering",
+    role: "Engineer",
+    contact: "9876543215",
+    status: "Inactive",
+    actions: "View",
+  },
+  {
+    id: 7,
+    empid: "EMP007",
+    name: "Ravi Teja",
+    department: "Maintenance",
+    role: "Technician",
+    contact: "9876543216",
+    status: "Active",
+    actions: "View",
+  },
+  {
+    id: 8,
+    empid: "EMP008",
+    name: "Pooja Nair",
+    department: "HR",
+    role: "HR Executive",
+    contact: "9876543217",
+    status: "Active",
+    actions: "View",
+  },
+  {
+    id: 9,
+    empid: "EMP009",
+    name: "Sanjay Gupta",
+    department: "Finance",
+    role: "Accountant",
+    contact: "9876543218",
+    status: "Active",
+    actions: "View",
+  },
+  {
+    id: 10,
+    empid: "EMP010",
+    name: "Neha Sharma",
+    department: "Administration",
+    role: "Admin",
+    contact: "9876543219",
+    status: "Inactive",
+    actions: "View",
+  },
+
+  {
+    id: 11,
+    empid: "EMP011",
+    name: "Anil Kumar",
+    department: "Production",
+    role: "Operator",
+    contact: "9876543220",
+    status: "Active",
+    actions: "View",
+  },
+  {
+    id: 12,
+    empid: "EMP012",
+    name: "Divya Rao",
+    department: "Quality",
+    role: "QA Engineer",
+    contact: "9876543221",
+    status: "Active",
+    actions: "View",
+  },
+  {
+    id: 13,
+    empid: "EMP013",
+    name: "Manoj Das",
+    department: "Logistics",
+    role: "Store Manager",
+    contact: "9876543222",
+    status: "Inactive",
+    actions: "View",
+  },
+  {
+    id: 14,
+    empid: "EMP014",
+    name: "Karthik R",
+    department: "Engineering",
+    role: "Senior Engineer",
+    contact: "9876543223",
+    status: "Active",
+    actions: "View",
+  },
+  {
+    id: 15,
+    empid: "EMP015",
+    name: "Sneha Iyer",
+    department: "HR",
+    role: "Recruiter",
+    contact: "9876543224",
+    status: "Active",
+    actions: "View",
+  },
+  {
+    id: 16,
+    empid: "EMP016",
+    name: "Prakash Mehta",
+    department: "Finance",
+    role: "Finance Manager",
+    contact: "9876543225",
+    status: "Active",
+    actions: "View",
+  },
+  {
+    id: 17,
+    empid: "EMP017",
+    name: "Naveen Kumar",
+    department: "Maintenance",
+    role: "Maintenance Lead",
+    contact: "9876543226",
+    status: "Inactive",
+    actions: "View",
+  },
+  {
+    id: 18,
+    empid: "EMP018",
+    name: "Lakshmi Devi",
+    department: "Production",
+    role: "Shift Lead",
+    contact: "9876543227",
+    status: "Active",
+    actions: "View",
+  },
+  {
+    id: 19,
+    empid: "EMP019",
+    name: "Harish Rao",
+    department: "Quality",
+    role: "Quality Manager",
+    contact: "9876543228",
+    status: "Active",
+    actions: "View",
+  },
+  {
+    id: 20,
+    empid: "EMP020",
+    name: "Mehul Jain",
+    department: "Administration",
+    role: "Office Manager",
+    contact: "9876543229",
+    status: "Inactive",
+    actions: "View",
+  },
+];
+
+const CustomDatagrid = () => {
+  return (
+    <CustomPaper sx={{ height: "480px" }}>
+      <div className="header_options">
+        <CustomTypography
+          calssName="heading"
+          sx={{
+            fontFamily: "Poppins, sans-serif",
+            fontSize: "24px",
+            fontWeight: 800,
+            color: "#1f2937",
+            padding: "17px",
+          }}
+        >
+          User Management
+        </CustomTypography>
+        <div className="usermanagement_searchOptions">
+          <CustomTextField
+            placeholder="search..."
+            slotProps={{
+              input: {
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <SearchIcon />
+                  </InputAdornment>
+                ),
+              },
+            }}
+          ></CustomTextField>
+          <CustomButton variant="contained">Add user</CustomButton>
+        </div>
+      </div>
+      <DataGrid
+        rows={rows}
+        columns={columns}
+        initialState={{
+          pagination: {
+            paginationModel: {
+              pageSize: 10,
+              page: 0,
+            },
+          },
+        }}
+        pageSizeOptions={[10]}
+        // checkboxSelection
+        disableRowSelectionOnClick
+      />
+    </CustomPaper>
+  );
+};
+
+export default CustomDatagrid;

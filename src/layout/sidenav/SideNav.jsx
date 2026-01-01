@@ -5,7 +5,7 @@ import "./SideNav.css";
 
 const SideNav = () => {
   return (
-    <div>
+    <div className="nav_container">
       <div className="logo_Container">
         <img
           src={logo}
@@ -13,7 +13,7 @@ const SideNav = () => {
           style={{ width: "300px", padding: "15px" }}
         />
       </div>
-      <div className="nav_container">
+      <div className="nav_options">
         <CustomTypography>Staff & Users</CustomTypography>
         <CustomTypography>Staff & Users</CustomTypography>
         <CustomTypography>Staff & Users</CustomTypography>

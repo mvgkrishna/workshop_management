@@ -8,6 +8,8 @@ const CustomTextField = ({
   onChange,
   name,
   value,
+  slotProps,
+  placeholder,
 }) => {
   return (
     <TextField
@@ -18,6 +20,8 @@ const CustomTextField = ({
       variant={variant}
       fullWidth={fullWidth}
       onChange={onChange}
+      slotProps={slotProps}
+      placeholder={placeholder}
     />
   );
 };
