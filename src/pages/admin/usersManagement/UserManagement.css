@@ -2,3 +2,14 @@
   display: flex;
   /* width: 100%; */
 }
+.header_options{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px;
+}
+
+.usermanagement_searchOptions{
+  display: flex;
+  gap:20px;
+}
