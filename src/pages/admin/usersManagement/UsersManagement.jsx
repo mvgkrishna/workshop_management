@@ -16,7 +16,7 @@ const UserManagement = () => {
   return (
     <div className="UserManagement_container">
       <SideNav />
-      <CustomPaper>
+      <CustomPaper sx={{ flexGrow: "1" }}>
         <div className="header_options">
           <CustomTypography
             calssName="heading"
@@ -47,9 +47,13 @@ const UserManagement = () => {
           </div>
         </div>
         <CustomDatagrid
+          box_sx={{
+            height: "calc(100vh - 70px)",
+            flexGrow: "1",
+          }}
           rows={rows}
           columns={columns}
-          pageSize={10}
+          pageSize={15}
           pageSizeOptions={[5]}
           checkboxSelection={false}
           disableRowSelectionOnClick

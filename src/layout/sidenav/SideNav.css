@@ -1,10 +1,10 @@
 .logo_Container {
   width: 300px;
-  border-bottom: 1px solid rgb(171, 167, 167);
+  /* border-bottom: 1px solid rgb(171, 167, 167); */
 }
 
 .nav_container {
-  border: 1px solid rgb(171, 167, 167);
+  /* border: 1px solid rgb(171, 167, 167); */
   width: 300px;
   min-height: 100vh;
 }

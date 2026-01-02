@@ -45,6 +45,7 @@ import { DataGrid } from "@mui/x-data-grid";
 // ];
 
 const CustomDatagrid = ({
+  box_sx,
   rows,
   columns,
   pageSize,
@@ -62,20 +63,22 @@ const CustomDatagrid = ({
   });
 
   return (
-    <DataGrid
-      rows={rows}
-      columns={columns}
-      initialState={{
-        pagination: {
-          paginationModel: {
-            pageSize: pageSize,
+    <Box sx={box_sx}>
+      <DataGrid
+        rows={rows}
+        columns={columns}
+        initialState={{
+          pagination: {
+            paginationModel: {
+              pageSize: pageSize,
+            },
           },
-        },
-      }}
-      pageSizeOptions={pageSizeOptions}
-      checkboxSelection={checkboxSelection}
-      disableRowSelectionOnClick={disableRowSelectionOnClick}
-    />
+        }}
+        pageSizeOptions={pageSizeOptions}
+        checkboxSelection={checkboxSelection}
+        disableRowSelectionOnClick={disableRowSelectionOnClick}
+      />
+    </Box>
   );
 };
 export default CustomDatagrid;

@@ -1,15 +1,17 @@
 .UserManagement_container {
   display: flex;
-  /* width: 100%; */
+  width: 100%;
+  /* border: 1px solid red; */
 }
-.header_options{
+.header_options {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0px 10px;
+  height: 70px;
 }
 
-.usermanagement_searchOptions{
+.usermanagement_searchOptions {
   display: flex;
-  gap:20px;
+  gap: 20px;
 }
